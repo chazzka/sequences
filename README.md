@@ -10,7 +10,11 @@ gleam add sequences
 import sequences
 
 pub fn main() {
-  // TODO: An example of the project in use
+  let res =
+    list.range(3, 100)
+    |> list.map(fn(x) { result.unwrap(first(x), 0.0) })
+    |> float.sum
+  io.debug(res) // should return 1.0
 }
 ```
 
